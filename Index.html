@@ -1,0 +1,183 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ifxforum-org:XSD:1" xmlns:xes="http://www.fnf.com/xes" xmlns:fnis="http://www.fnf.com/xes" xmlns="urn:ifxforum-org:XSD:1" xmlns:ifx="urn:ifxforum-org:XSD:1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <fnis:TDDepositAddRq>        
+         <fnis:RqUID>2beca05c-d368-11e4-977f-000000000000</fnis:RqUID>
+         <fnis:MsgRqHdr>
+            <fnis:CredentialsRqHdr>
+               <ifx:SubjectRole>System</ifx:SubjectRole>
+               <ifx:SecTokenLogin>
+                  <ifx:LoginName/>
+                  <ifx:SubjectPswd>
+                     <ifx:CryptType/>
+                     <ifx:Pswd/>
+                  </ifx:SubjectPswd>
+               </ifx:SecTokenLogin>
+            </fnis:CredentialsRqHdr>
+            <fnis:ContextRqHdr>
+               <ifx:CustLangPref>en_US</ifx:CustLangPref>
+		 <ifx:ClientTerminalSeqNum>somthingshouldunique-001</ifx:ClientTerminalSeqNum> 
+               <ifx:ClientApp>
+                  <ifx:Org>c</ifx:Org>
+                  <ifx:Name>ECBS</ifx:Name>
+                  <ifx:Version>2.0</ifx:Version>
+               </ifx:ClientApp>
+               <fnis:Interface>
+                  <ifx:InterfaceName>TDdepositAdd</ifx:InterfaceName>
+                  <ifx:NameSpace>urn:ifxforum-org:XSD:20</ifx:NameSpace>
+                  <ifx:InterfaceVersion>01</ifx:InterfaceVersion>
+                  <fnis:SvcVersion>01</fnis:SvcVersion>
+                  <fnis:SvcAdapterVersion>01</fnis:SvcAdapterVersion>
+               </fnis:Interface>
+               <ifx:SPName>com.fnis.xes.PRF</ifx:SPName>
+            </fnis:ContextRqHdr>
+            <fnis:ClientChannel>
+               <fnis:ChannelCode>99</fnis:ChannelCode>
+               <fnis:AppName>DEFAULT</fnis:AppName>
+            </fnis:ClientChannel>
+         </fnis:MsgRqHdr>
+         <fnis:TDDepositInfo>
+         	<fnis:DepositAcctInfo>
+			<ToAcctId>01233880000021</ToAcctId>
+			<Months>7</Months> 
+			<Days>9</Days>
+			<Variance>1.0</Variance>
+			<PrincipalMaturity>2</PrincipalMaturity>
+			<PrincipalTransferAcct>01592111419428</PrincipalTransferAcct>
+			<InterestMaturity>2</InterestMaturity>
+			<InterestTransferAcct>01592111419428</InterestTransferAcct>
+		</fnis:DepositAcctInfo>
+		<fnis:DepositTransferInfo>
+			<FromAcctId>01232880017121</FromAcctId>
+			<fnis:DepositInfoRef>
+				<ifx:CurAmt>
+					<ifx:Amt>100000.00</ifx:Amt>
+				</ifx:CurAmt>
+			</fnis:DepositInfoRef>
+			<ifx:BranchIdent></ifx:BranchIdent>
+			<fnis:ChannelName>SOAP-IT-SIT</fnis:ChannelName>
+		</fnis:DepositTransferInfo>
+		<fnis:TDDepositMiscData>
+	      <fnis:MiscType>CommentDb</fnis:MiscType>
+	      <fnis:MiscText>Dr DepositTD TC-07001</fnis:MiscText>
+	    </fnis:TDDepositMiscData>
+		<fnis:TDDepositMiscData>
+			<fnis:MiscType>CommentCr</fnis:MiscType>
+			<fnis:MiscText>Cr DepositTD-07001</fnis:MiscText>
+		</fnis:TDDepositMiscData>
+         </fnis:TDDepositInfo>
+      </fnis:TDDepositAddRq>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <TDDepositAddRs xmlns="http://www.fnf.com/xes">
+         <Status xmlns="urn:ifxforum-org:XSD:1">
+            <StatusCode>0</StatusCode>
+            <Severity>Info</Severity>
+            <StatusDesc>Success</StatusDesc>
+            <AdditionalStatus xmlns="http://www.fnf.com/xes">
+               <StatusCode xmlns="urn:ifxforum-org:XSD:1">0</StatusCode>
+               <ServerStatusCode xmlns="urn:ifxforum-org:XSD:1">0</ServerStatusCode>
+               <Severity xmlns="urn:ifxforum-org:XSD:1">Info</Severity>
+               <StatusDesc xmlns="urn:ifxforum-org:XSD:1">TRANSACTION PROCESSING COMPLETE.</StatusDesc>
+            </AdditionalStatus>
+         </Status>
+         <RqUID xmlns="urn:ifxforum-org:XSD:1">2beca05c-d368-11e4-977f-000000000000</RqUID>
+         <TDDepositRec>
+            <RefData xmlns="urn:ifxforum-org:XSD:1">
+               <RefType>TrnRef</RefType>
+               <RefIdent>15001</RefIdent>
+            </RefData>
+            <TDDepositInfo>
+               <DepositAcctInfo>
+                  <ToAcctId xmlns="urn:ifxforum-org:XSD:1">01233880000021</ToAcctId>
+                  <Months>7</Months>
+                  <Days>9</Days>
+                  <Variance>1.0</Variance>
+                  <PrincipalMaturity xmlns="urn:ifxforum-org:XSD:1">2</PrincipalMaturity>
+                  <PrincipalTransferAcct xmlns="urn:ifxforum-org:XSD:1">01592111419428</PrincipalTransferAcct>
+                  <InterestMaturity xmlns="urn:ifxforum-org:XSD:1">2</InterestMaturity>
+                  <InterestTransferAcct xmlns="urn:ifxforum-org:XSD:1">01592111419428</InterestTransferAcct>
+               </DepositAcctInfo>
+               <DepositTransferInfo>
+                  <FromAcctId xmlns="urn:ifxforum-org:XSD:1">01232880017121</FromAcctId>
+                  <DepositInfoRef>
+                     <CurAmt>
+                        <Amt xmlns="urn:ifxforum-org:XSD:1">100000.00</Amt>
+                     </CurAmt>
+                  </DepositInfoRef>
+                  <BranchIdent xmlns="urn:ifxforum-org:XSD:1"/>
+                  <ChannelName>SOAP-IT-SIT</ChannelName>
+               </DepositTransferInfo>
+               <TDDepositMiscData>
+                  <MiscType>CommentDb</MiscType>
+                  <MiscText>Dr DepositTD TC-07001</MiscText>
+               </TDDepositMiscData>
+               <TDDepositMiscData>
+                  <MiscType>CommentCr</MiscType>
+                  <MiscText>Cr DepositTD-07001</MiscText>
+               </TDDepositMiscData>
+               <MasterIDAcct>01233880000021</MasterIDAcct>
+               <TDSubAcctId xmlns="urn:ifxforum-org:XSD:1">388000000423</TDSubAcctId>
+               <DepAcctIdent>
+                  <DepAcctIdentValue xmlns="urn:ifxforum-org:XSD:1">388000000423</DepAcctIdentValue>
+                  <DepItemNo>021</DepItemNo>
+               </DepAcctIdent>
+               <AcctBal xmlns="urn:ifxforum-org:XSD:1">
+                  <BalType>
+                     <BalTypeValues>Ledger</BalTypeValues>
+                  </BalType>
+                  <CurAmt xmlns="http://www.fnf.com/xes">
+                     <Amt xmlns="urn:ifxforum-org:XSD:1">100000.00</Amt>
+                  </CurAmt>
+               </AcctBal>
+               <AcctBal xmlns="urn:ifxforum-org:XSD:1">
+                  <BalType>
+                     <BalTypeValues>CalcAvail</BalTypeValues>
+                  </BalType>
+                  <CurAmt xmlns="http://www.fnf.com/xes">
+                     <Amt xmlns="urn:ifxforum-org:XSD:1">100000.00</Amt>
+                  </CurAmt>
+               </AcctBal>
+               <InterestRateInfo xmlns="urn:ifxforum-org:XSD:1">
+                  <InterestRate>2.50000</InterestRate>
+               </InterestRateInfo>
+               <OpenDt>2024-06-14</OpenDt>
+               <Term xmlns="urn:ifxforum-org:XSD:1">
+                  <Count>219</Count>
+                  <TermUnits>Days</TermUnits>
+                  <Desc>7M|9D</Desc>
+               </Term>
+               <MaturityDt xmlns="urn:ifxforum-org:XSD:1">2025-01-23</MaturityDt>
+               <PrincipalMaturity xmlns="urn:ifxforum-org:XSD:1">2</PrincipalMaturity>
+               <InterestMaturity xmlns="urn:ifxforum-org:XSD:1">2</InterestMaturity>
+            </TDDepositInfo>
+            <DebitAcctInfo>
+               <DebitAcctId>01232880017121</DebitAcctId>
+               <AcctBal xmlns="urn:ifxforum-org:XSD:1">
+                  <BalType>
+                     <BalTypeValues>Ledger</BalTypeValues>
+                  </BalType>
+                  <CurAmt xmlns="http://www.fnf.com/xes">
+                     <Amt xmlns="urn:ifxforum-org:XSD:1">87699998.30</Amt>
+                  </CurAmt>
+               </AcctBal>
+               <AcctBal xmlns="urn:ifxforum-org:XSD:1">
+                  <BalType>
+                     <BalTypeValues>CalcAvail</BalTypeValues>
+                  </BalType>
+                  <CurAmt xmlns="http://www.fnf.com/xes">
+                     <Amt xmlns="urn:ifxforum-org:XSD:1">87699998.30</Amt>
+                  </CurAmt>
+               </AcctBal>
+            </DebitAcctInfo>
+            <TDDepositStatus>
+               <TDDepositStatusCode>0</TDDepositStatusCode>
+               <EffDt>2024-06-14T12:00:00.000000-00:00</EffDt>
+            </TDDepositStatus>
+         </TDDepositRec>
+      </TDDepositAddRs>
+   </soapenv:Body>
+</soapenv:Envelope>

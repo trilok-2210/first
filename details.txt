@@ -1,0 +1,50 @@
+http://vlmazasiabidv1.fisdev.local:9081/xpress/services/wss/ifx15-1/IFXService
+ 
+Content-Type:"text/xml"
+soapAction:"urn:message"
+ 
+ 
+<soapenv:Envelope
+    xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:ctg="http://www.fnf.com/xes/ctg"
+    xmlns:ifx="http://www.ifxforum.org/IFX_150"
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:v2="http://www.fnf.com/xes/services/acct/acctinq/v2_1"
+    xmlns:xes="http://www.fnf.com/xes"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soapenv:Header />
+    <soapenv:Body>
+        <v2:AcctInqRq>
+            <ifx:RqUID>ef9039a4-e3ae-40d2-bbff-88ee69a2abc7</ifx:RqUID>
+            <ifx:MsgRqHdr>
+                <ifx:SignonRq>
+                    <ifx:SignonPswd>
+                        <ifx:CustId>
+                            <ifx:SPName />
+                            <ifx:CustLoginId>samm</ifx:CustLoginId>
+                        </ifx:CustId>
+                        <ifx:CustPswd>
+                            <ifx:CryptType />
+                            <ifx:Pswd>samm</ifx:Pswd>
+                        </ifx:CustPswd>
+                    </ifx:SignonPswd>
+                    <ifx:ClientDt>2022-12-13</ifx:ClientDt>
+                    <ifx:CustLangPref>en_US</ifx:CustLangPref>
+                    <ifx:ClientApp>
+                        <ifx:Org />
+                        <ifx:Name>A111_TPT</ifx:Name>
+                        <ifx:Version />
+                    </ifx:ClientApp>
+                    <ifx:BankId>com.fnf.xes.PRF</ifx:BankId>
+                </ifx:SignonRq>
+            </ifx:MsgRqHdr>
+            <ifx:DepAcctId>
+                <ifx:AcctId>8840021270</ifx:AcctId>
+                <ifx:AcctType>DDA</ifx:AcctType>
+                <ifx:BankInfo />
+            </ifx:DepAcctId>
+        </v2:AcctInqRq>
+    </soapenv:Body>
+</soapenv:Envelope>
+ 
